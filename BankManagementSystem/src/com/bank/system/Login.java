@@ -35,7 +35,7 @@ public class Login extends JFrame implements ActionListener{
 		cardno.setBounds(120, 150, 250, 30);
 		add(cardno);
 		
-		//Text field
+		//Text field Name
 		cardTextField = new JTextField();
 		cardTextField.setBounds(300, 150, 230, 30);
 		cardTextField.setFont(new Font("Arial", Font.BOLD, 14));
@@ -46,7 +46,7 @@ public class Login extends JFrame implements ActionListener{
 		pin.setBounds(120, 220, 250, 30);
 		add(pin);
 
-		//Text field
+		//Input field
 		pinTextField = new JPasswordField();
 		pinTextField.setBounds(300, 220, 230, 30);
 		pinTextField.setFont(new Font("Arial", Font.BOLD, 14));
@@ -96,7 +96,8 @@ public class Login extends JFrame implements ActionListener{
 				
 			}
 			else if(ae.getSource() == signup) {
-				
+				setVisible(false);
+				new SignUpOne().setVisible(true);
 			}
 		}
 		

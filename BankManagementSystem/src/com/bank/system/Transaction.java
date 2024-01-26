@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 public class Transaction extends JFrame implements ActionListener{
 	
 	String pinnumber;
-	JButton deposite , withdrawl, fastCash , miniStatement , pinChange ,balanceEnquiry, exit;
+	JButton deposit , withdrawl, fastCash , miniStatement , pinChange ,balanceEnquiry, exit;
 	
 	public Transaction(String pinnumber) {
 		this.pinnumber = pinnumber;
@@ -35,10 +35,10 @@ public class Transaction extends JFrame implements ActionListener{
 		text.setFont(new Font("Raleway", Font.BOLD, 16));
 		image.add(text);
 		
-		deposite = new JButton("Deposite");
-		deposite.setBounds(170, 370, 150, 28);
-		deposite.addActionListener(this);
-		image.add(deposite);
+		deposit = new JButton("Deposite");
+		deposit.setBounds(170, 370, 150, 28);
+		deposit.addActionListener(this);
+		image.add(deposit);
 		
 		withdrawl= new JButton("Cash Withdrawl");
 		withdrawl.setBounds(355, 370, 150, 28);
@@ -86,8 +86,14 @@ public class Transaction extends JFrame implements ActionListener{
 			
 			if(ae.getSource()== exit) {
 				System.exit(0);
+			}
+			else if(ae.getSource() == deposit) {
+				setVisible(false);
+				new Deposit(pinnumber).setVisible(true);
 			
-				
+			}else if(ae.getSource() == withdrawl) {
+				setVisible(false);
+				new Withdrawl(pinnumber).setVisible(true);
 			}
 		}
 		

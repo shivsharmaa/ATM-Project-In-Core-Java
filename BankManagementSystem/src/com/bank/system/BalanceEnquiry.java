@@ -32,11 +32,11 @@ public class BalanceEnquiry extends JFrame implements ActionListener{
 		add(image);
 		
 		back = new JButton("BACK");
-		back.setForeground(Color.WHITE);
-		back.setBounds(355, 520, 150, 30);
+		back.setBounds(365, 450, 150, 30);
 		back.addActionListener(this);
 		image.add(back);
 		
+
 		
 		Connect c = new Connect();
 		
